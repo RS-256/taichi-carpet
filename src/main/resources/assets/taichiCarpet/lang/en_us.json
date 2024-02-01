@@ -1,0 +1,5 @@
+{
+  "carpet.category.taichi": "taichi",
+
+  "carpet.rule.optimizedFallDamageRaycast.desc": "Disable fallDamageRaycast while the entity is moving upwards. Ported from chronos carpet by bread, pentasteve."
+ }
