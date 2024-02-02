@@ -3,6 +3,9 @@ package taichiCarpet;
 import carpet.CarpetExtension;
 import carpet.CarpetServer;
 import carpet.api.settings.SettingsManager;
+
+import taichiCarpet.commands.*;
+
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.mojang.brigadier.CommandDispatcher;
@@ -33,7 +36,6 @@ public class TaichiCarpetExtension implements CarpetExtension, ModInitializer {
     @Override
     public void onGameStarted()
     {
-        System.out.println("initializing taichi-carpet");
         CarpetServer.settingsManager.parseSettingsClass(TaichiCarpetSettings.class);;
     }
 
@@ -50,6 +52,8 @@ public class TaichiCarpetExtension implements CarpetExtension, ModInitializer {
     @Override
     public void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher, final CommandRegistryAccess commandBuildContext)
     {
+        viewCommand.register(dispatcher);
+        simulationCommand.register(dispatcher);
     }
 
     @Override

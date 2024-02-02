@@ -1,5 +1,9 @@
 {
   "carpet.category.taichi": "taichi",
 
-  "carpet.rule.optimizedFallDamageRaycast.desc": "Disable fallDamageRaycast while the entity is moving upwards. Ported from chronos carpet by bread, pentasteve."
+  "carpet.rule.optimizedFallDamageRaycast.desc": "Disable fallDamageRaycast while the entity is moving upwards. Ported from chronos carpet by bread, pentasteve.",
+
+  "carpet.rule.commandView.desc" : "Enable /view command to changes the view distance of the server without op",
+
+  "carpet.rule.commandSimulation.desc" : "Enable /simulation command to change the simulation distance of the server without op"
  }

@@ -11,4 +11,14 @@ public class TaichiCarpetSettings
             categories = { OPTIMIZATION, TAICHI }
     )
     public static boolean optimizedFallDamageRaycast = false;
+
+    @Rule(
+            categories = { SURVIVAL, COMMAND, TAICHI }
+    )
+    public static boolean commandView = false;
+
+    @Rule(
+            categories = { SURVIVAL, COMMAND, TAICHI }
+    )
+    public static boolean commandSimulation = false;
 }
