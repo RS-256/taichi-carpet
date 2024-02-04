@@ -22,7 +22,8 @@
 		]
 	},
 	"mixins": [
-		"chronos.mixins.json"
+		"chronos.mixins.json",
+		"taichi.mixins.json"
 	],
 
 	"depends": {

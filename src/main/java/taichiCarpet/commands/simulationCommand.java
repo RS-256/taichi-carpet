@@ -1,8 +1,5 @@
 package taichiCarpet.commands;
 
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.text.Text;
 import taichiCarpet.TaichiCarpetSettings;
 
 import carpet.utils.CommandHelper;
@@ -11,6 +8,7 @@ import com.mojang.brigadier.CommandDispatcher;
 
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
+import net.minecraft.text.Text;
 
 import static com.mojang.brigadier.arguments.IntegerArgumentType.getInteger;
 import static com.mojang.brigadier.arguments.IntegerArgumentType.integer;
@@ -21,7 +19,7 @@ public class simulationCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         dispatcher.register(CommandManager.literal("simulation")
                 .requires(player -> CommandHelper.canUseCommand(player, TaichiCarpetSettings.commandSimulation))
-                .executes(context -> executeQuerrySimulation(context.getSource().withLevel(3)))
+                .executes(context -> executeQuerySimulation(context.getSource().withLevel(3)))
                 .then(CommandManager.argument("distance", integer(0, 32))
                         .executes(context -> executeChangeSimulation(context.getSource().withLevel(3), getInteger(context, "distance")))
                 )
@@ -39,7 +37,7 @@ public class simulationCommand {
         return 1;
     }
 
-    public static int executeQuerrySimulation(ServerCommandSource source){
+    public static int executeQuerySimulation(ServerCommandSource source){
 
         String command = "carpet simulationDistance";
 

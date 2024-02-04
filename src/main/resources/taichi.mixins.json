@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "taichiCarpet.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "HUDControllerMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

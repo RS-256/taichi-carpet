@@ -5,5 +5,7 @@
 
   "carpet.rule.commandView.desc" : "Enable /view command to changes the view distance of the server without op",
 
-  "carpet.rule.commandSimulation.desc" : "Enable /simulation command to change the simulation distance of the server without op"
+  "carpet.rule.commandSimulation.desc" : "Enable /simulation command to change the simulation distance of the server without op",
+
+  "carpet.rule.commandNotice.desc" : "Enable /notice command to change logger 'notice' message"
  }
