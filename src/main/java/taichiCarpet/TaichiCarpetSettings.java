@@ -7,6 +7,7 @@ import static carpet.api.settings.RuleCategory.*;
 public class TaichiCarpetSettings
 {
     private static final String TAICHI = "taichi";
+    private  static final String LOGGER = "logger";
     @Rule(
             categories = { OPTIMIZATION, TAICHI }
     )
@@ -15,10 +16,35 @@ public class TaichiCarpetSettings
     @Rule(
             categories = { SURVIVAL, COMMAND, TAICHI }
     )
-    public static boolean commandView = false;
+    public static String commandView = "ops";
 
     @Rule(
             categories = { SURVIVAL, COMMAND, TAICHI }
     )
-    public static boolean commandSimulation = false;
+    public static String commandSimulation = "ops";
+
+    @Rule(
+          categories =  {COMMAND, LOGGER, TAICHI }
+    )
+    public static String commandNotice = "ops";
+
+    @Rule(
+            categories = {TAICHI }
+    )
+    public static boolean loginNotifier = false;
+
+    @Rule(
+            categories = {OPTIMIZATION, TAICHI }
+    )
+    public static boolean optimizedDragonRespawn = false;
+
+    @Rule(
+            categories = {OPTIMIZATION, TAICHI }
+    )
+    public static boolean disableWanderingOnCart = false;
+
+    @Rule(
+            categories = { OPTIMIZATION, TAICHI }
+    )
+    public static boolean disableNetherPortalCollisionCheck = false;
 }

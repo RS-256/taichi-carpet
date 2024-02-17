@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "AMS.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "BlockPatternTestTransformInvoker",
+    "EnderDragonFightMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

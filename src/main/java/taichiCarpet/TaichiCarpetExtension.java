@@ -5,15 +5,21 @@ import carpet.CarpetServer;
 import carpet.api.settings.SettingsManager;
 
 import taichiCarpet.commands.*;
+import taichiCarpet.logging.*;
+import taichiCarpet.utils.*;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
+
 import com.mojang.brigadier.CommandDispatcher;
+
 import net.fabricmc.api.ModInitializer;
+
 import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
+
 import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
@@ -23,10 +29,6 @@ import java.util.Map;
 
 public class TaichiCarpetExtension implements CarpetExtension, ModInitializer {
     public static void noop() { }
-    static
-    {
-        CarpetServer.manageExtension(new TaichiCarpetExtension());
-    }
 
     public static void loadExtension()
     {
@@ -36,7 +38,7 @@ public class TaichiCarpetExtension implements CarpetExtension, ModInitializer {
     @Override
     public void onGameStarted()
     {
-        CarpetServer.settingsManager.parseSettingsClass(TaichiCarpetSettings.class);;
+        CarpetServer.settingsManager.parseSettingsClass(TaichiCarpetSettings.class);
     }
 
     @Override
@@ -54,6 +56,7 @@ public class TaichiCarpetExtension implements CarpetExtension, ModInitializer {
     {
         viewCommand.register(dispatcher);
         simulationCommand.register(dispatcher);
+        noticeCommand.register(dispatcher);
     }
 
     @Override
@@ -65,6 +68,7 @@ public class TaichiCarpetExtension implements CarpetExtension, ModInitializer {
     @Override
     public void onPlayerLoggedIn(ServerPlayerEntity player)
     {
+        sendMassage.loginMessageNotifier(player);
     }
 
     @Override
@@ -77,6 +81,13 @@ public class TaichiCarpetExtension implements CarpetExtension, ModInitializer {
         System.out.println("Initializing taichi Carpet Extension");
         TaichiCarpetExtension.loadExtension();
     }
+
+    @Override
+    public void registerLoggers() {
+        taichiLoggerRegistry.registerLoggers();
+    }
+
+
 
     @Override
     public Map<String, String> canHasTranslations(String lang) {
