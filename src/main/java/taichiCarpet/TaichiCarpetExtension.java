@@ -4,8 +4,13 @@ import carpet.CarpetExtension;
 import carpet.CarpetServer;
 import carpet.api.settings.SettingsManager;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.loader.api.FabricLoader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import taichiCarpet.commands.*;
 import taichiCarpet.logging.*;
+import taichiCarpet.network.RegistarPackets;
 import taichiCarpet.utils.*;
 
 import com.google.common.reflect.TypeToken;
@@ -28,6 +33,13 @@ import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 public class TaichiCarpetExtension implements CarpetExtension, ModInitializer {
+
+    public static final String MOD_ID = "taichi-carpet";
+    public static final String MOD_NAME = "taichiCarpet";
+    public static final String MOD_VERSION = "1.2.0-1.20.1";
+
+    public static final Logger LOGGER = LoggerFactory.getLogger("taichi-carpet");
+    public static final EnvType ENV = FabricLoader.getInstance().getEnvironmentType();
     public static void noop() { }
 
     public static void loadExtension()
@@ -80,6 +92,7 @@ public class TaichiCarpetExtension implements CarpetExtension, ModInitializer {
     public void onInitialize() {
         System.out.println("Initializing taichi Carpet Extension");
         TaichiCarpetExtension.loadExtension();
+        RegistarPackets.onServer.register();
     }
 
     @Override

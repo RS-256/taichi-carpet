@@ -8,6 +8,8 @@ public class TaichiCarpetSettings
 {
     private static final String TAICHI = "taichi";
     private  static final String LOGGER = "logger";
+    private static final String PROTOCOL = "protocol";
+
     @Rule(
             categories = { OPTIMIZATION, TAICHI }
     )
@@ -47,4 +49,11 @@ public class TaichiCarpetSettings
             categories = { OPTIMIZATION, TAICHI }
     )
     public static boolean disableNetherPortalCollisionCheck = false;
+
+    @Rule(
+            options = {"-1", "0", "32"},
+            strict = false,
+            categories = { SURVIVAL, PROTOCOL, TAICHI }
+    )
+    public static int blockEntitySyncing = 0;
 }

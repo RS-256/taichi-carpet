@@ -50,6 +50,14 @@ Ported from chronos carpet.
 - Default value: `false`
 - Categories: `OPTIMIZATION`, `TAICHI`
 
+### blockEntitySyncing
+Enable sync of blockEntity on the server without op.
+effective radius of blockEntitySyncing.
+(0: disable, -1: infinity)
+- Type: `boolean`
+- Default value: `false`
+- Categories: `SURVIVAL`, `PROTOCOL`, `TAICHI`
+
 ## commands
 
 ### view

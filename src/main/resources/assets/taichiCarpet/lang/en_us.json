@@ -1,5 +1,6 @@
 {
   "carpet.category.taichi": "taichi",
+  "carpet.category.protocol": "protocol",
 
   "carpet.rule.optimizedFallDamageRaycast.desc": "Disable fallDamageRaycast while the entity is moving upwards. Ported from chronos carpet by bread, pentasteve.",
   "carpet.rule.optimizedFallDamageRaycast.extra0" : "Ported from chronos carpet by bread, pentasteve",
@@ -18,5 +19,9 @@
 
   "carpet.rule.disableNetherPortalCollisionCheck.desc": "Disable laggy nether portal collision checks introduced in 1.19.3",
   "carpet.rule.disableNetherPortalCollisionCheck.extra0": "Large mobs may suffocate when going through portals if you enable this",
-  "carpet.rule.disableNetherPortalCollisionCheck.extra1" : "Ported from chronos carpet by bread, pentasteve"
+  "carpet.rule.disableNetherPortalCollisionCheck.extra1" : "Ported from chronos carpet by bread, pentasteve",
+
+  "carpet.rule.blockEntitySyncing.desc" : "Enable sync of blockEntity on the server without op",
+  "carpet.rule.blockEntitySyncing.extra0" : "effective radius of blockEntitySyncing.",
+  "carpet.rule.blockEntitySyncing.extra1": "0: disable, -1: infinity"
 }

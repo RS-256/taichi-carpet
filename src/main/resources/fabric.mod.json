@@ -1,12 +1,12 @@
 {
 	"schemaVersion": 1,
 	"id": "taichi-carpet",
-	"version": "1.0.0",
+	"version": "1.1.2",
 
 	"name": "taichi carpet",
 	"description": "Carpet extension for taichi SMP",
 	"authors": [
-		"RS256, topi"
+		"RS256, topi_banana"
 	],
 	"contact": {
 		"sources": " https://github.com/TaichiServer "
@@ -19,6 +19,9 @@
 	"entrypoints": {
 		"main": [
 			"taichiCarpet.TaichiCarpetExtension"
+		],
+		"client": [
+			"taichiCarpet.client.TaichiCarpetClient"
 		]
 	},
 	"mixins": [
@@ -30,7 +33,8 @@
 	"depends": {
 		"minecraft": "1.20.1",
 		"fabricloader": ">=0.14.2",
-		"carpet": "*"
+		"carpet": "*",
+		"essential-client": "*"
 	},
 	"suggests": {
 		"flamingo": "*"
