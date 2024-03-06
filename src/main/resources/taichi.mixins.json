@@ -3,8 +3,9 @@
   "package": "taichiCarpet.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "disableWanderingOnCartMixin",
     "HUDControllerMixin",
-    "disableWanderingOnCartMixin"
+    "WanderAroundGoalAccessor"
   ],
   "client": [
     "GetBlockEntityMixin"
