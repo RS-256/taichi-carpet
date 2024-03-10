@@ -91,6 +91,13 @@ effective radius of blockEntitySyncing.
 
 `[<distance>]` : must be between `0` to `32`
 
+### hat
+`/hat` :  ...
+
+
+### sit
+`/sit` :  ...
+
 ### notice
 `/notice <text>` : change notice logger text
 
