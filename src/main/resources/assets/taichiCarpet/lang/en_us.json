@@ -9,6 +9,10 @@
 
   "carpet.rule.commandSimulation.desc" : "Enable /simulation command to change the simulation distance of the server without op",
 
+  "carpet.rule.commandHat.desc" : "Allows you to equip items to your head slot using /hat",
+
+  "carpet.rule.commandSit.desc" : "Player can sit down when using /sit",
+
   "carpet.rule.commandNotice.desc" : "Enable /notice command to change logger 'notice' message",
 
   "carpet.rule.loginNotifier.desc" : "notice to you when you logged in",

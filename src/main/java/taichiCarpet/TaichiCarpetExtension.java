@@ -68,6 +68,8 @@ public class TaichiCarpetExtension implements CarpetExtension, ModInitializer {
     {
         viewCommand.register(dispatcher);
         simulationCommand.register(dispatcher);
+        hatCommand.register(dispatcher);
+        sitCommand.register(dispatcher);
         noticeCommand.register(dispatcher);
     }
 

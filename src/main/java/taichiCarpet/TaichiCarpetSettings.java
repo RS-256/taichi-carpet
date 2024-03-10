@@ -26,22 +26,32 @@ public class TaichiCarpetSettings
     public static String commandSimulation = "ops";
 
     @Rule(
-          categories =  {COMMAND, LOGGER, TAICHI }
+            categories = { SURVIVAL, COMMAND, TAICHI }
+    )
+    public static String commandHat = "ops";
+
+    @Rule(
+            categories = { SURVIVAL, COMMAND, TAICHI }
+    )
+    public static String commandSit = "ops";
+
+    @Rule(
+          categories = { COMMAND, LOGGER, TAICHI }
     )
     public static String commandNotice = "ops";
 
     @Rule(
-            categories = {TAICHI }
+            categories = { TAICHI }
     )
     public static boolean loginNotifier = false;
 
     @Rule(
-            categories = {OPTIMIZATION, TAICHI }
+            categories = { OPTIMIZATION, TAICHI }
     )
     public static boolean optimizedDragonRespawn = false;
 
     @Rule(
-            categories = {OPTIMIZATION, TAICHI }
+            categories = { OPTIMIZATION, TAICHI }
     )
     public static boolean disableWanderingOnCart = false;
 

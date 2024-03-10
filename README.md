@@ -36,6 +36,22 @@ Enable /view command to changes the simulation distance of the server without op
 - Allowed options: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
 - Categories: `SURVIVAL`, `COMMAND`, `TAICHI`
 
+### commandHat
+Allows you to equip items to your head slot using /hat.
+Ported from EssentialAddons.
+- Type: `String`
+- Default value: `ops`
+- Allowed options: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
+- Categories: `SURVIVAL`, `COMMAND`, `TAICHI`
+
+### commandSit
+Player can sit down when using /sit.
+Ported from PCA.
+- Type: `String`
+- Default value: `ops`
+- Allowed options: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
+- Categories: `SURVIVAL`, `COMMAND`, `TAICHI`
+
 ### commandNotice
 Enable /notice command to change notice logger value.
 - Type: `String`
