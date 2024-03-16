@@ -36,9 +36,14 @@ public class TaichiCarpetSettings
     public static String commandSit = "ops";
 
     @Rule(
-          categories = { COMMAND, LOGGER, TAICHI }
+            categories = { COMMAND, LOGGER, TAICHI }
     )
     public static String commandNotice = "ops";
+
+    @Rule(
+            categories = { SURVIVAL, COMMAND, TAICHI }
+    )
+    public static String commandDataGet = "ops";
 
     @Rule(
             categories = { TAICHI }
@@ -66,4 +71,14 @@ public class TaichiCarpetSettings
             categories = { SURVIVAL, PROTOCOL, TAICHI }
     )
     public static int blockEntitySyncing = 0;
+
+    @Rule(
+            categories = { OPTIMIZATION, TAICHI }
+    )
+    public static boolean optimizedHypot = false;
+
+    @Rule(
+            categories = { OPTIMIZATION, TAICHI }
+    )
+    public static boolean optimizedRounding = false;
 }

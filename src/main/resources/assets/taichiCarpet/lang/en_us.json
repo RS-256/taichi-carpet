@@ -27,5 +27,12 @@
 
   "carpet.rule.blockEntitySyncing.desc" : "Enable sync of blockEntity on the server without op",
   "carpet.rule.blockEntitySyncing.extra0" : "effective radius of blockEntitySyncing.",
-  "carpet.rule.blockEntitySyncing.extra1": "0: disable, -1: infinity"
+  "carpet.rule.blockEntitySyncing.extra1": "0: disable, -1: infinity",
+
+  "carpet.rule.optimizedHypot.desc": "Changes MathHelper.hypot to a faster implementation. It gives nearly perfectly accurate results",
+  "carpet.rule.optimizedHypot.extra0": "Currently only effect chunks blending so will likely be unnoticeable. It is ~1.6x faster",
+  "carpet.rule.optimizedHypot.extra1": "recommended that you set this on permanently, and restart the server for best results",
+
+  "carpet.rule.optimizedRounding.desc": "Changes Math.round to a faster implementation. Although it does not give the exact same results",
+  "carpet.rule.optimizedRounding.extra0": "This does not affect many things and will most likely be unnoticeable. It is ~1.28x faster"
 }

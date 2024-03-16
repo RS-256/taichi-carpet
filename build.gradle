@@ -11,6 +11,10 @@ repositories {
 		name = "Modrinth"
 		url = "https://api.modrinth.com/maven"
 	}
+	maven {
+		name 'JitPack'
+		url 'https://jitpack.io'
+	}
 }
 
 dependencies {
@@ -23,7 +27,10 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	modImplementation "maven.modrinth:carpet:${project.carpet_version}"
-	modImplementation "maven.modrinth:essentialclient:${project.essentialclient_version}"
+	//modImplementation "maven.modrinth:essentialclient:${project.essentialclient_version}"
+
+	include "com.github.Fallen-Breath:conditional-mixin:${project.conditionalmixin_version}"
+	modImplementation "com.github.Fallen-Breath:conditional-mixin:${project.conditionalmixin_version}"
 }
 
 processResources {
