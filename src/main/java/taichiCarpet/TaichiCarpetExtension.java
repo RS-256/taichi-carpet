@@ -36,7 +36,7 @@ public class TaichiCarpetExtension implements CarpetExtension, ModInitializer {
 
     public static final String MOD_ID = "taichi-carpet";
     public static final String MOD_NAME = "taichiCarpet";
-    public static final String MOD_VERSION = "1.2.0-1.20.1";
+    public static final String MOD_VERSION = "1.1.5-1.20.1";
 
     public static final Logger LOGGER = LoggerFactory.getLogger("taichi-carpet");
     public static final EnvType ENV = FabricLoader.getInstance().getEnvironmentType();

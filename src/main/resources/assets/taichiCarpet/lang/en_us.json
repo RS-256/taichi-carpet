@@ -25,9 +25,7 @@
   "carpet.rule.disableNetherPortalCollisionCheck.extra0": "Large mobs may suffocate when going through portals if you enable this",
   "carpet.rule.disableNetherPortalCollisionCheck.extra1" : "Ported from chronos carpet by bread, pentasteve",
 
-  "carpet.rule.blockEntitySyncing.desc" : "Enable sync of blockEntity on the server without op",
-  "carpet.rule.blockEntitySyncing.extra0" : "effective radius of blockEntitySyncing.",
-  "carpet.rule.blockEntitySyncing.extra1": "0: disable, -1: infinity",
+  "carpet.rule.blockInventorySyncing.desc" : "Enable sync of blockEntity on the server without op",
 
   "carpet.rule.optimizedHypot.desc": "Changes MathHelper.hypot to a faster implementation. It gives nearly perfectly accurate results",
   "carpet.rule.optimizedHypot.extra0": "Currently only effect chunks blending so will likely be unnoticeable. It is ~1.6x faster",

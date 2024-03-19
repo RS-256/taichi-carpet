@@ -41,11 +41,6 @@ public class TaichiCarpetSettings
     public static String commandNotice = "ops";
 
     @Rule(
-            categories = { SURVIVAL, COMMAND, TAICHI }
-    )
-    public static String commandDataGet = "ops";
-
-    @Rule(
             categories = { TAICHI }
     )
     public static boolean loginNotifier = false;
@@ -66,11 +61,9 @@ public class TaichiCarpetSettings
     public static boolean disableNetherPortalCollisionCheck = false;
 
     @Rule(
-            options = {"-1", "0", "32"},
-            strict = false,
             categories = { SURVIVAL, PROTOCOL, TAICHI }
     )
-    public static int blockEntitySyncing = 0;
+    public static boolean blockInventorySyncing = false;
 
     @Rule(
             categories = { OPTIMIZATION, TAICHI }

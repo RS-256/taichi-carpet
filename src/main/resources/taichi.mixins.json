@@ -9,7 +9,6 @@
     "WanderAroundGoalAccessor"
   ],
   "client": [
-    "GetBlockEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

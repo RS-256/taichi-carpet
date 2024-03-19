@@ -14,16 +14,14 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import taichiCarpet.TaichiCarpetSettings;
 import taichiCarpet.network.RegistarPackets;
+import taichiCarpet.utils.LimitedQueue;
 
-import java.util.HashMap;
-import java.util.Map;
+public class BlockInventorySyncing {
 
-public class BlockEntitySyncing {
-
-    public static Map<BlockPos, NbtCompound> blockEntityCacheMap = new HashMap<>();
+    public static LimitedQueue<BlockPos, NbtCompound> CacheQueue = new LimitedQueue<>(2);
 
     public static void serverHandler(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler, PacketByteBuf packetbb, PacketSender sender) {
-        if (TaichiCarpetSettings.blockEntitySyncing == 0) return;
+        if (!TaichiCarpetSettings.blockInventorySyncing) return;
 
         BlockPos blockPos = packetbb.readBlockPos();
         ServerWorld world = player.getServerWorld();
@@ -34,16 +32,18 @@ public class BlockEntitySyncing {
 
             NbtCompound nbt = blockEntity.createNbt();
 
+            if( nbt.getSizeInBytes() > 524288 ) return;
+
             PacketByteBuf senderPacketbb =  new PacketByteBuf(Unpooled.buffer());
 
             senderPacketbb.writeNbt(nbt);
             senderPacketbb.writeBlockPos(blockPos);
-            sender.sendPacket(RegistarPackets.onServer.handlers.BLOCKNBT.getId(), senderPacketbb);
+            sender.sendPacket(RegistarPackets.onServer.handlers.BLOCK_INVENTORY.getId(), senderPacketbb);
         });
     }
     public static void clientHandler(MinecraftClient client, ClientPlayNetworkHandler handler, PacketByteBuf packetbb, PacketSender sender) {
-        NbtCompound nbt = packetbb.readNbt();
+        NbtCompound blockInventoryCache = packetbb.readNbt();
         BlockPos blockPos = packetbb.readBlockPos();
-        blockEntityCacheMap.put(blockPos, nbt);
+        CacheQueue.put(blockPos, blockInventoryCache);
     }
 }
