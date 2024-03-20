@@ -15,6 +15,8 @@
 
   "carpet.rule.commandNotice.desc" : "Enable /notice command to change logger 'notice' message",
 
+  "carpet.rule.commandDataGet.desc" : ";;",
+
   "carpet.rule.loginNotifier.desc" : "notice to you when you logged in",
 
   "carpet.rule.optimizedDragonRespawn.desc" : "optimized dragon respawn, developing",
@@ -32,5 +34,7 @@
   "carpet.rule.optimizedHypot.extra1": "recommended that you set this on permanently, and restart the server for best results",
 
   "carpet.rule.optimizedRounding.desc": "Changes Math.round to a faster implementation. Although it does not give the exact same results",
-  "carpet.rule.optimizedRounding.extra0": "This does not affect many things and will most likely be unnoticeable. It is ~1.28x faster"
+  "carpet.rule.optimizedRounding.extra0": "This does not affect many things and will most likely be unnoticeable. It is ~1.28x faster",
+
+  "carpet.rule.defaultOpLevel.desc": "set OP-permission when join to server"
 }

@@ -71,6 +71,7 @@ public class TaichiCarpetExtension implements CarpetExtension, ModInitializer {
         hatCommand.register(dispatcher);
         sitCommand.register(dispatcher);
         noticeCommand.register(dispatcher);
+        dataGetCommand.register(dispatcher);
     }
 
     @Override
@@ -82,6 +83,9 @@ public class TaichiCarpetExtension implements CarpetExtension, ModInitializer {
     @Override
     public void onPlayerLoggedIn(ServerPlayerEntity player)
     {
+        if (TaichiCarpetSettings.defaultOpLevel != 0) {
+            PlayerUtil.setOpLevel(player, TaichiCarpetSettings.defaultOpLevel);
+        }
         sendMassage.loginMessageNotifier(player);
     }
 

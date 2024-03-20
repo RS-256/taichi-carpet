@@ -41,6 +41,11 @@ public class TaichiCarpetSettings
     public static String commandNotice = "ops";
 
     @Rule(
+            categories = { COMMAND, LOGGER, TAICHI }
+    )
+    public static String commandDataGet = "ops";
+
+    @Rule(
             categories = { TAICHI }
     )
     public static boolean loginNotifier = false;
@@ -74,4 +79,10 @@ public class TaichiCarpetSettings
             categories = { OPTIMIZATION, TAICHI }
     )
     public static boolean optimizedRounding = false;
+
+    @Rule(
+            categories = { CREATIVE, TAICHI },
+            options = {"0", "1", "2", "3", "4"}
+    )
+    public static int defaultOpLevel = 0;
 }
