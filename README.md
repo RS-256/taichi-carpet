@@ -66,13 +66,45 @@ Ported from chronos carpet.
 - Default value: `false`
 - Categories: `OPTIMIZATION`, `TAICHI`
 
-### blockEntitySyncing
-Enable sync of blockEntity on the server without op.
-effective radius of blockEntitySyncing.
+### blockInventorySyncing
+Enable sync of blockInventory on the server without op
 (0: disable, -1: infinity)
 - Type: `boolean`
 - Default value: `false`
 - Categories: `SURVIVAL`, `PROTOCOL`, `TAICHI`
+
+### defaultOpLevel
+set OP-permission when join to server
+- Type: `int`
+- Default value: `0`
+- Categories: `CREATIVE`, `TAICHI`
+
+### deathNoticeDiscord
+Death notification to discord chat over webhook.
+(value type is URI)
+- Type: `String`
+- Default value: `#None`
+- Categories: `SURVIVAL`, `TAICHI`
+
+### deathNoticeDiscordType
+deathNoticeDiscord Message Type
+(embed or text)
+- Type: `boolean`
+- Default value: `embed`
+- Categories: `SURVIVAL`, `TAICHI`
+
+### serverName
+set ServerName for deathNoticeDiscord
+- Type: `boolean`
+- Default value: `#None`
+- Categories: `SURVIVAL`, `TAICHI`
+
+## taichiPacketRateLimit
+Set packet rate limit (perTick) TaichiCarpet-Protocol
+- Type: `int`
+- Default value: `-1`
+- Categories: `PROTOCOL`, `TAICHI`
+
 
 ## commands
 

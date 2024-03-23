@@ -6,6 +6,8 @@
     "disableWanderingOnCartMixin",
     "EntityCollisionMixin",
     "HUDControllerMixin",
+    "PlayerCommandMixin",
+    "ServerPlayerEntityMixin",
     "WanderAroundGoalAccessor"
   ],
   "client": [

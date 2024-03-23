@@ -41,7 +41,7 @@ public class TaichiCarpetSettings
     public static String commandNotice = "ops";
 
     @Rule(
-            categories = { COMMAND, LOGGER, TAICHI }
+            categories = { SURVIVAL, COMMAND, TAICHI }
     )
     public static String commandDataGet = "ops";
 
@@ -85,4 +85,31 @@ public class TaichiCarpetSettings
             options = {"0", "1", "2", "3", "4"}
     )
     public static int defaultOpLevel = 0;
+
+    @Rule(
+            categories = { SURVIVAL, TAICHI },
+            strict = false,
+            options = { "#None", "https://discord.com/api/webhooks/0000/xxxxxxx" }
+    )
+    public static String deathNoticeDiscord = "#None";
+
+    @Rule(
+            categories = { SURVIVAL, TAICHI },
+            options = { "embed", "text" }
+    )
+    public static String deathNoticeDiscordType = "embed";
+
+    @Rule(
+            categories = { SURVIVAL, TAICHI },
+            strict = false,
+            options = { "#None" }
+    )
+    public static String serverName = "#None";
+
+    @Rule(
+            categories = { PROTOCOL, TAICHI },
+            strict = false,
+            options = { "1", "2" }
+    )
+    public static int taichiPacketRateLimit = -1;
 }

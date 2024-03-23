@@ -1,6 +1,5 @@
 package taichiCarpet.commands;
 
-import carpet.script.language.Sys;
 import carpet.utils.CommandHelper;
 import com.mojang.brigadier.CommandDispatcher;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -10,8 +9,6 @@ import net.minecraft.entity.ItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.nbt.NbtList;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;

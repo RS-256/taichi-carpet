@@ -27,7 +27,7 @@
   "carpet.rule.disableNetherPortalCollisionCheck.extra0": "Large mobs may suffocate when going through portals if you enable this",
   "carpet.rule.disableNetherPortalCollisionCheck.extra1" : "Ported from chronos carpet by bread, pentasteve",
 
-  "carpet.rule.blockInventorySyncing.desc" : "Enable sync of blockEntity on the server without op",
+  "carpet.rule.blockInventorySyncing.desc" : "Enable sync of blockInventory on the server without op",
 
   "carpet.rule.optimizedHypot.desc": "Changes MathHelper.hypot to a faster implementation. It gives nearly perfectly accurate results",
   "carpet.rule.optimizedHypot.extra0": "Currently only effect chunks blending so will likely be unnoticeable. It is ~1.6x faster",
@@ -36,5 +36,12 @@
   "carpet.rule.optimizedRounding.desc": "Changes Math.round to a faster implementation. Although it does not give the exact same results",
   "carpet.rule.optimizedRounding.extra0": "This does not affect many things and will most likely be unnoticeable. It is ~1.28x faster",
 
-  "carpet.rule.defaultOpLevel.desc": "set OP-permission when join to server"
+  "carpet.rule.defaultOpLevel.desc": "set OP-permission when join to server",
+
+  "carpet.rule.deathNoticeDiscord.desc" : "Death notification to discord chat over webhook.",
+  "carpet.rule.deathNoticeDiscordType.desc" : "deathNoticeDiscord Message Type",
+  "carpet.rule.serverName.desc" : "set ServerName for deathNoticeDiscord",
+
+
+  "carpet.rule.taichiPacketRateLimit.desc" : "Set packet rate limit (perTick) TaichiCarpet-Protocol"
 }
