@@ -30,7 +30,8 @@
 		"taichi.client.mixins.json",
 		"carpet-fixes.mixins.json",
 		"AMS.mixins.json",
-		"pca.mixins.json"
+		"pca.mixins.json",
+		"fastfurnace.mixins.json"
 	],
 
 	"depends": {

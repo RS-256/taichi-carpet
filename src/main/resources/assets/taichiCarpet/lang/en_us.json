@@ -36,6 +36,8 @@
   "carpet.rule.optimizedRounding.desc": "Changes Math.round to a faster implementation. Although it does not give the exact same results",
   "carpet.rule.optimizedRounding.extra0": "This does not affect many things and will most likely be unnoticeable. It is ~1.28x faster",
 
+  "carpet.rule.optimizedFurnaces.desc": "This mod does a few things relating to the vanilla furnace, blast furnace, and smoker so that they run faster during their update method, improving TPS.",
+
   "carpet.rule.defaultOpLevel.desc": "set OP-permission when join to server",
 
   "carpet.rule.deathNoticeDiscord.desc" : "Death notification to discord chat over webhook.",
@@ -43,5 +45,5 @@
   "carpet.rule.serverName.desc" : "set ServerName for deathNoticeDiscord",
 
 
-  "carpet.rule.taichiPacketRateLimit.desc" : "Set packet rate limit (perTick) TaichiCarpet-Protocol"
+  "carpet.rule.taichiPacketRateLimit.desc" : "Set packet rate limit TaichiCarpet-Protocol"
 }

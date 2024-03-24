@@ -81,6 +81,11 @@ public class TaichiCarpetSettings
     public static boolean optimizedRounding = false;
 
     @Rule(
+            categories = { OPTIMIZATION, TAICHI }
+    )
+    public static boolean optimizedFurnaces = false;
+
+    @Rule(
             categories = { CREATIVE, TAICHI },
             options = {"0", "1", "2", "3", "4"}
     )
@@ -109,7 +114,7 @@ public class TaichiCarpetSettings
     @Rule(
             categories = { PROTOCOL, TAICHI },
             strict = false,
-            options = { "1", "2" }
+            options = { "-1", "1", "2" }
     )
     public static int taichiPacketRateLimit = -1;
 }

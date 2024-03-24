@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "fastfurnace.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "AbstractFurnaceBlockEntityMixin",
+    "ServerResourceManagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

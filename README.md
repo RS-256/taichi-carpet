@@ -73,6 +73,27 @@ Enable sync of blockInventory on the server without op
 - Default value: `false`
 - Categories: `SURVIVAL`, `PROTOCOL`, `TAICHI`
 
+### optimizedHypot
+Changes MathHelper.hypot to a faster implementation. It gives nearly perfectly accurate results
+Currently only effect chunks blending so will likely be unnoticeable. It is ~1.6x faster
+recommended that you set this on permanently, and restart the server for best results
+- Type: `boolean`
+- Default value: `false`
+- Categories: `OPTIMIZATION`, `TAICHI`
+
+### optimizedRounding
+Changes Math.round to a faster implementation. Although it does not give the exact same results
+This does not affect many things and will most likely be unnoticeable. It is ~1.28x faster
+- Type: `boolean`
+- Default value: `false`
+- Categories: `OPTIMIZATION`, `TAICHI`
+
+### optimizedFurnaces
+This mod does a few things relating to the vanilla furnace, blast furnace, and smoker so that they run faster during their update method, improving TPS.
+- Type: `boolean`
+- Default value: `false`
+- Categories: `OPTIMIZATION`, `TAICHI`
+
 ### defaultOpLevel
 set OP-permission when join to server
 - Type: `int`
@@ -100,7 +121,7 @@ set ServerName for deathNoticeDiscord
 - Categories: `SURVIVAL`, `TAICHI`
 
 ## taichiPacketRateLimit
-Set packet rate limit (perTick) TaichiCarpet-Protocol
+Set packet rate limit TaichiCarpet-Protocol
 - Type: `int`
 - Default value: `-1`
 - Categories: `PROTOCOL`, `TAICHI`
