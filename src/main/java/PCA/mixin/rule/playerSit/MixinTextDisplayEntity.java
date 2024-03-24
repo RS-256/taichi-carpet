@@ -5,25 +5,22 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.decoration.ArmorStandEntity;
+import net.minecraft.entity.decoration.DisplayEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(ArmorStandEntity.class)
-public abstract class MixinArmorStandEntity extends LivingEntity implements SitEntity {
+@Mixin(DisplayEntity.TextDisplayEntity.class)
+public abstract class MixinTextDisplayEntity extends DisplayEntity implements SitEntity {
     private boolean sitEntity = false;
 
-    protected MixinArmorStandEntity(EntityType<? extends LivingEntity> entityType, World world) {
+    protected MixinTextDisplayEntity(EntityType<? extends LivingEntity> entityType, World world) {
         super(entityType, world);
     }
-
-    @Shadow
-    protected abstract void setMarker(boolean marker);
 
     @Override
     public boolean isSitEntity() {
@@ -33,7 +30,6 @@ public abstract class MixinArmorStandEntity extends LivingEntity implements SitE
     @Override
     public void setSitEntity(boolean isSitEntity) {
         this.sitEntity = isSitEntity;
-        this.setMarker(isSitEntity);
         this.setInvisible(isSitEntity);
     }
 

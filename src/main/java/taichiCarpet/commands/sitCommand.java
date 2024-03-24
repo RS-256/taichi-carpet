@@ -3,7 +3,9 @@ package taichiCarpet.commands;
 import PCA.util.rule.playerSit.SitEntity;
 import carpet.utils.CommandHelper;
 import com.mojang.brigadier.CommandDispatcher;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.decoration.ArmorStandEntity;
+import net.minecraft.entity.decoration.DisplayEntity;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -21,13 +23,17 @@ public class sitCommand {
 
     public static int sitPlayer(ServerPlayerEntity player){
 
-        ServerWorld world = player.getServerWorld();
-        ArmorStandEntity armorStandEntity = new ArmorStandEntity(world, player.getX(), player.getY() - 0.16, player.getZ());
+        if(!player.isOnGround()) return 1;
 
-        ((SitEntity) armorStandEntity).setSitEntity(true);
-        world.spawnEntity(armorStandEntity);
+        ServerWorld world = player.getServerWorld();
+
+        DisplayEntity.TextDisplayEntity textDisplayEntity = new DisplayEntity.TextDisplayEntity(EntityType.TEXT_DISPLAY, world);
+        textDisplayEntity.setPosition(player.getPos());
+
+        ((SitEntity) textDisplayEntity).setSitEntity(true);
+        world.spawnEntity(textDisplayEntity);
         player.setSneaking(false);
-        player.startRiding(armorStandEntity);
+        player.startRiding(textDisplayEntity);
 
         return 1;
     }
