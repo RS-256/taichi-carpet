@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "taichiCarpet.client.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "GetBlockEntityMixin",
+    "ClientTickMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

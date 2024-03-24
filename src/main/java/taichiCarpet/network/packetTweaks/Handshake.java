@@ -8,6 +8,7 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayNetworkHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
+import taichiCarpet.client.TaichiCarpetClient;
 import taichiCarpet.network.RegistarPackets;
 
 import java.util.HashMap;
@@ -24,6 +25,7 @@ public class Handshake {
         sender.sendPacket(RegistarPackets.onServer.handlers.HANDSHAKE.getId(), sendPacketbb);
     }
     public static void clientHandler(MinecraftClient client, ClientPlayNetworkHandler handler, PacketByteBuf packetbb, PacketSender sender) {
+        TaichiCarpetClient.ConnectedServer = true;
         LOGGER.info("[taichi-carpet(CLIENT)] logged in server");
     }
 }

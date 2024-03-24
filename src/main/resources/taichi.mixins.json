@@ -4,11 +4,13 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "disableWanderingOnCartMixin",
+    "EntityCollisionMixin",
     "HUDControllerMixin",
+    "PlayerCommandMixin",
+    "ServerPlayerEntityMixin",
     "WanderAroundGoalAccessor"
   ],
   "client": [
-    "GetBlockEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "PCA.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "rule.playerSit.MixinArmorStandEntity"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

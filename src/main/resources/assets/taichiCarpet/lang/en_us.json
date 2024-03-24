@@ -9,7 +9,13 @@
 
   "carpet.rule.commandSimulation.desc" : "Enable /simulation command to change the simulation distance of the server without op",
 
+  "carpet.rule.commandHat.desc" : "Allows you to equip items to your head slot using /hat",
+
+  "carpet.rule.commandSit.desc" : "Player can sit down when using /sit",
+
   "carpet.rule.commandNotice.desc" : "Enable /notice command to change logger 'notice' message",
+
+  "carpet.rule.commandDataGet.desc" : ";;",
 
   "carpet.rule.loginNotifier.desc" : "notice to you when you logged in",
 
@@ -21,7 +27,23 @@
   "carpet.rule.disableNetherPortalCollisionCheck.extra0": "Large mobs may suffocate when going through portals if you enable this",
   "carpet.rule.disableNetherPortalCollisionCheck.extra1" : "Ported from chronos carpet by bread, pentasteve",
 
-  "carpet.rule.blockEntitySyncing.desc" : "Enable sync of blockEntity on the server without op",
-  "carpet.rule.blockEntitySyncing.extra0" : "effective radius of blockEntitySyncing.",
-  "carpet.rule.blockEntitySyncing.extra1": "0: disable, -1: infinity"
+  "carpet.rule.blockInventorySyncing.desc" : "Enable sync of blockInventory on the server without op",
+
+  "carpet.rule.optimizedHypot.desc": "Changes MathHelper.hypot to a faster implementation. It gives nearly perfectly accurate results",
+  "carpet.rule.optimizedHypot.extra0": "Currently only effect chunks blending so will likely be unnoticeable. It is ~1.6x faster",
+  "carpet.rule.optimizedHypot.extra1": "recommended that you set this on permanently, and restart the server for best results",
+
+  "carpet.rule.optimizedRounding.desc": "Changes Math.round to a faster implementation. Although it does not give the exact same results",
+  "carpet.rule.optimizedRounding.extra0": "This does not affect many things and will most likely be unnoticeable. It is ~1.28x faster",
+
+  "carpet.rule.optimizedFurnaces.desc": "This mod does a few things relating to the vanilla furnace, blast furnace, and smoker so that they run faster during their update method, improving TPS.",
+
+  "carpet.rule.defaultOpLevel.desc": "set OP-permission when join to server",
+
+  "carpet.rule.deathNoticeDiscord.desc" : "Death notification to discord chat over webhook.",
+  "carpet.rule.deathNoticeDiscordType.desc" : "deathNoticeDiscord Message Type",
+  "carpet.rule.serverName.desc" : "set ServerName for deathNoticeDiscord",
+
+
+  "carpet.rule.taichiPacketRateLimit.desc" : "Set packet rate limit TaichiCarpet-Protocol"
 }

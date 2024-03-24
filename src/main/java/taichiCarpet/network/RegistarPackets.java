@@ -3,7 +3,7 @@ package taichiCarpet.network;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.util.Identifier;
-import taichiCarpet.network.packetTweaks.BlockEntitySyncing;
+import taichiCarpet.network.packetTweaks.BlockInventorySyncing;
 import taichiCarpet.network.packetTweaks.Handshake;
 
 import static taichiCarpet.TaichiCarpetExtension.MOD_ID;
@@ -12,7 +12,7 @@ public class RegistarPackets {
         public enum handlers {
 
             HANDSHAKE (Handshake::serverHandler),
-            BLOCKNBT (BlockEntitySyncing::serverHandler);
+            BLOCK_INVENTORY (BlockInventorySyncing::serverHandler);
 
             private ServerPlayNetworking.PlayChannelHandler handler;
             handlers(ServerPlayNetworking.PlayChannelHandler handler) {
@@ -38,7 +38,7 @@ public class RegistarPackets {
         public enum handlers {
 
             HANDSHAKE (Handshake::clientHandler),
-            BLOCKNBT (BlockEntitySyncing::clientHandler);
+            BLOCK_INVENTORY (BlockInventorySyncing::clientHandler);
 
             private ClientPlayNetworking.PlayChannelHandler handler;
             handlers(ClientPlayNetworking.PlayChannelHandler handler) {

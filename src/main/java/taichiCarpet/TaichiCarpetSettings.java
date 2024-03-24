@@ -26,22 +26,37 @@ public class TaichiCarpetSettings
     public static String commandSimulation = "ops";
 
     @Rule(
-          categories =  {COMMAND, LOGGER, TAICHI }
+            categories = { SURVIVAL, COMMAND, TAICHI }
+    )
+    public static String commandHat = "ops";
+
+    @Rule(
+            categories = { SURVIVAL, COMMAND, TAICHI }
+    )
+    public static String commandSit = "ops";
+
+    @Rule(
+            categories = { COMMAND, LOGGER, TAICHI }
     )
     public static String commandNotice = "ops";
 
     @Rule(
-            categories = {TAICHI }
+            categories = { SURVIVAL, COMMAND, TAICHI }
+    )
+    public static String commandDataGet = "ops";
+
+    @Rule(
+            categories = { TAICHI }
     )
     public static boolean loginNotifier = false;
 
     @Rule(
-            categories = {OPTIMIZATION, TAICHI }
+            categories = { OPTIMIZATION, TAICHI }
     )
     public static boolean optimizedDragonRespawn = false;
 
     @Rule(
-            categories = {OPTIMIZATION, TAICHI }
+            categories = { OPTIMIZATION, TAICHI }
     )
     public static boolean disableWanderingOnCart = false;
 
@@ -51,9 +66,55 @@ public class TaichiCarpetSettings
     public static boolean disableNetherPortalCollisionCheck = false;
 
     @Rule(
-            options = {"-1", "0", "32"},
-            strict = false,
             categories = { SURVIVAL, PROTOCOL, TAICHI }
     )
-    public static int blockEntitySyncing = 0;
+    public static boolean blockInventorySyncing = false;
+
+    @Rule(
+            categories = { OPTIMIZATION, TAICHI }
+    )
+    public static boolean optimizedHypot = false;
+
+    @Rule(
+            categories = { OPTIMIZATION, TAICHI }
+    )
+    public static boolean optimizedRounding = false;
+
+    @Rule(
+            categories = { OPTIMIZATION, TAICHI }
+    )
+    public static boolean optimizedFurnaces = false;
+
+    @Rule(
+            categories = { CREATIVE, TAICHI },
+            options = {"0", "1", "2", "3", "4"}
+    )
+    public static int defaultOpLevel = 0;
+
+    @Rule(
+            categories = { SURVIVAL, TAICHI },
+            strict = false,
+            options = { "#None", "https://discord.com/api/webhooks/0000/xxxxxxx" }
+    )
+    public static String deathNoticeDiscord = "#None";
+
+    @Rule(
+            categories = { SURVIVAL, TAICHI },
+            options = { "embed", "text" }
+    )
+    public static String deathNoticeDiscordType = "embed";
+
+    @Rule(
+            categories = { SURVIVAL, TAICHI },
+            strict = false,
+            options = { "#None" }
+    )
+    public static String serverName = "#None";
+
+    @Rule(
+            categories = { PROTOCOL, TAICHI },
+            strict = false,
+            options = { "-1", "1", "2" }
+    )
+    public static int taichiPacketRateLimit = -1;
 }
