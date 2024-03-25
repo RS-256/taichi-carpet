@@ -1,4 +1,4 @@
-package taichiCarpet.network.packetTweaks;
+package taichiCarpet.network.packetHandlers;
 
 import io.netty.buffer.Unpooled;
 import net.fabricmc.fabric.api.networking.v1.PacketSender;
@@ -38,7 +38,7 @@ public class BlockInventorySyncing {
 
             senderPacketbb.writeNbt(nbt);
             senderPacketbb.writeBlockPos(blockPos);
-            sender.sendPacket(RegistarPackets.onServer.handlers.BLOCK_INVENTORY.getId(), senderPacketbb);
+            sender.sendPacket(RegistarPackets.onClient.BLOCK_INVENTORY, senderPacketbb);
         });
     }
     public static void clientHandler(MinecraftClient client, ClientPlayNetworkHandler handler, PacketByteBuf packetbb, PacketSender sender) {

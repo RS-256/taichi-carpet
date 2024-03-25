@@ -3,10 +3,9 @@ package taichiCarpet.client;
 import io.netty.buffer.Unpooled;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
-import net.fabricmc.fabric.api.networking.v1.PacketSender;
 import net.minecraft.network.PacketByteBuf;
 import taichiCarpet.network.RegistarPackets;
-import taichiCarpet.network.packetTweaks.BlockInventorySyncing;
+import taichiCarpet.network.packetHandlers.BlockInventorySyncing;
 
 import static taichiCarpet.TaichiCarpetExtension.*;
 
@@ -16,7 +15,6 @@ public class TaichiCarpetClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        RegistarPackets.onClient.register();
         ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
             ConnectedServer = false;
             BlockInventorySyncing.CacheQueue.clear();
@@ -24,7 +22,7 @@ public class TaichiCarpetClient implements ClientModInitializer {
             PacketByteBuf packetbb =  new PacketByteBuf(Unpooled.buffer());
             packetbb.writeString(MOD_VERSION);
 
-            sender.sendPacket( RegistarPackets.onServer.handlers.HANDSHAKE.getId(), packetbb );
+            sender.sendPacket( RegistarPackets.onServer.HANDSHAKE, packetbb );
         });
 
         ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> {
