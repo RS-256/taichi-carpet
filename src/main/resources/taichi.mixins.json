@@ -5,6 +5,7 @@
   "mixins": [
     "disableWanderingOnCartMixin",
     "EntityCollisionMixin",
+    "EntityPlayerActionPackMixin",
     "HUDControllerMixin",
     "PlayerCommandMixin",
     "ServerPlayerEntityMixin",

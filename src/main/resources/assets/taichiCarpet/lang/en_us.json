@@ -45,5 +45,7 @@
   "carpet.rule.serverName.desc" : "set ServerName for deathNoticeDiscord",
 
 
-  "carpet.rule.taichiPacketRateLimit.desc" : "Set packet rate limit TaichiCarpet-Protocol"
+  "carpet.rule.taichiPacketRateLimit.desc" : "Set packet rate limit TaichiCarpet-Protocol",
+
+  "carpet.rule.disablePassengerLimit.desc" : "passenger limit when send player mount command"
 }
