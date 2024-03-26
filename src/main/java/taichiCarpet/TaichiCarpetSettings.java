@@ -117,4 +117,9 @@ public class TaichiCarpetSettings
             options = { "-1", "1", "2" }
     )
     public static int taichiPacketRateLimit = -1;
+
+    @Rule(
+            categories = { TAICHI }
+    )
+    public static boolean disablePassengerLimit = true;
 }
