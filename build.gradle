@@ -27,6 +27,9 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	modImplementation "maven.modrinth:carpet:${project.carpet_version}"
+	//modImplementation "maven.modrinth:carpet-fixes:${project.carpet_fixes_version}"
+	modImplementation "maven.modrinth:carpet-tis-addition:${project.carpet_tis_version}"
+	modImplementation "maven.modrinth:carpet-extra:${project.carpet_extra_version}"
 	//modImplementation "maven.modrinth:essentialclient:${project.essentialclient_version}"
 
 	include "com.github.Fallen-Breath:conditional-mixin:${project.conditionalmixin_version}"

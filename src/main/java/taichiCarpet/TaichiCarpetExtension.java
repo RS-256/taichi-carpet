@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import taichiCarpet.commands.*;
 import taichiCarpet.logging.*;
 import taichiCarpet.network.RegistarPackets;
+import taichiCarpet.network.packetHandlers.Handshake;
 import taichiCarpet.utils.*;
 
 import com.google.common.reflect.TypeToken;
@@ -42,30 +43,25 @@ public class TaichiCarpetExtension implements CarpetExtension, ModInitializer {
     public static final EnvType ENV = FabricLoader.getInstance().getEnvironmentType();
     public static void noop() { }
 
-    public static void loadExtension()
-    {
+    public static void loadExtension() {
         CarpetServer.manageExtension(new TaichiCarpetExtension());
     }
 
     @Override
-    public void onGameStarted()
-    {
+    public void onGameStarted() {
         CarpetServer.settingsManager.parseSettingsClass(TaichiCarpetSettings.class);
     }
 
     @Override
-    public void onServerLoaded(MinecraftServer server)
-    {
+    public void onServerLoaded(MinecraftServer server) {
     }
 
     @Override
-    public void onTick(MinecraftServer server)
-    {
+    public void onTick(MinecraftServer server) {
     }
 
     @Override
-    public void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher, final CommandRegistryAccess commandBuildContext)
-    {
+    public void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher, final CommandRegistryAccess commandBuildContext) {
         viewCommand.register(dispatcher);
         simulationCommand.register(dispatcher);
         hatCommand.register(dispatcher);
@@ -75,14 +71,12 @@ public class TaichiCarpetExtension implements CarpetExtension, ModInitializer {
     }
 
     @Override
-    public SettingsManager extensionSettingsManager()
-    {
+    public SettingsManager extensionSettingsManager() {
         return null;
     }
 
     @Override
-    public void onPlayerLoggedIn(ServerPlayerEntity player)
-    {
+    public void onPlayerLoggedIn(ServerPlayerEntity player) {
         if (TaichiCarpetSettings.defaultOpLevel != 0) {
             PlayerUtil.setOpLevel(player, TaichiCarpetSettings.defaultOpLevel);
         }
@@ -90,15 +84,21 @@ public class TaichiCarpetExtension implements CarpetExtension, ModInitializer {
     }
 
     @Override
-    public void onPlayerLoggedOut(ServerPlayerEntity player)
-    {
+    public void onPlayerLoggedOut(ServerPlayerEntity player) {
+        if (Handshake.players.contains(player)) {
+            Handshake.players.remove(player);
+        }
     }
 
     @Override
     public void onInitialize() {
         System.out.println("Initializing taichi Carpet Extension");
         TaichiCarpetExtension.loadExtension();
-        RegistarPackets.onServer.register();
+        if (ENV==EnvType.SERVER) {
+            RegistarPackets.onServer.register();
+        } else if (ENV==EnvType.CLIENT) {
+            RegistarPackets.onClient.register();
+        }
     }
 
     @Override

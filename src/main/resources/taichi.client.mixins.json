@@ -5,8 +5,8 @@
   "mixins": [
   ],
   "client": [
-    "GetBlockEntityMixin",
-    "ClientTickMixin"
+    "ClientTickMixin",
+    "GetBlockEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

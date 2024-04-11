@@ -28,7 +28,7 @@
 		"chronos.mixins.json",
 		"taichi.mixins.json",
 		"taichi.client.mixins.json",
-		"carpet-fixes.mixins.json",
+      	"carpetfixes.mixins.json",
 		"AMS.mixins.json",
 		"pca.mixins.json",
 		"fastfurnace.mixins.json"
