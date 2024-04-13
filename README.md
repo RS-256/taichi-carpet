@@ -13,7 +13,8 @@ Optimize dragon respawn method. Ported from carpet AMS addition.
 - Categories: `OPTIMIZATION`, `TAICHI`
 
 ### optimizedFallDamageRaycast
-Disable fallDamageRaycast while the entity is moving upwards. Ported from chronos carpet by bread, pentasteve.
+Disable fallDamageRaycast while the entity is moving upwards.
+Ported from chronos carpet by bread, pentasteve.
 - Type: `boolean`
 - Default value: `false`
 - Categories: `OPTIMIZATION`, `TAICHI`
@@ -89,13 +90,13 @@ This does not affect many things and will most likely be unnoticeable. It is ~1.
 - Categories: `OPTIMIZATION`, `TAICHI`
 
 ### optimizedFurnaces
-This mod does a few things relating to the vanilla furnace, blast furnace, and smoker so that they run faster during their update method, improving TPS.
+Optimise method of updating state for furnace, blast furnace, and smoker.
 - Type: `boolean`
 - Default value: `false`
 - Categories: `OPTIMIZATION`, `TAICHI`
 
 ### defaultOpLevel
-set OP-permission when join to server
+Set OP-permission when join to server.
 - Type: `int`
 - Default value: `0`
 - Categories: `CREATIVE`, `TAICHI`
@@ -130,7 +131,6 @@ Set packet rate limit TaichiCarpet-Protocol
 ## commands
 
 ### view
-
 `/view` :  display current simulationDistance
 
 `/view [<distance>]` : change the value of viewDistance in carpet without op
@@ -145,11 +145,11 @@ Set packet rate limit TaichiCarpet-Protocol
 `[<distance>]` : must be between `0` to `32`
 
 ### hat
-`/hat` :  ...
+`/hat` : equip the item you have on your own head
 
 
 ### sit
-`/sit` :  ...
+`/sit` : sit on the spot
 
 ### notice
 `/notice <text>` : change notice logger text
@@ -170,6 +170,7 @@ To change value, use `/notice`
 
 Simple logger that display when the server will autosave and how long ago the last autosave was.
 This logger does not directly detect autosave, but rather a calculated value based on the time elapsed since the server started, which could be incorrect.
+Ported from essential addons.
 
 ## playerCommand
 
