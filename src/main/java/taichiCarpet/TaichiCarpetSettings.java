@@ -114,9 +114,9 @@ public class TaichiCarpetSettings
     @Rule(
             categories = { PROTOCOL, TAICHI },
             strict = false,
-            options = { "-1", "1", "2" }
+            options = { "1", "2", "20" }
     )
-    public static int taichiPacketRateLimit = -1;
+    public static int taichiPacketRateLimit = 1;
 
     @Rule(
             categories = { TAICHI }
