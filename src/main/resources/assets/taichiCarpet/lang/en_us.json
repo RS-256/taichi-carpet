@@ -44,6 +44,7 @@
   "carpet.rule.deathNoticeDiscordType.desc" : "deathNoticeDiscord Message Type",
   "carpet.rule.serverName.desc" : "set ServerName for deathNoticeDiscord",
 
+  "carpet.rule.optimizedShulker.desc" : "optimized shulker for mobswitch",
 
   "carpet.rule.taichiPacketRateLimit.desc" : "Set packet rate limit TaichiCarpet-Protocol",
 

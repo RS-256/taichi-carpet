@@ -123,7 +123,7 @@ set ServerName for deathNoticeDiscord
 ## taichiPacketRateLimit
 Set packet rate limit TaichiCarpet-Protocol
 - Type: `int`
-- Default value: `-1`
+- Default value: `1`
 - Categories: `PROTOCOL`, `TAICHI`
 
 
