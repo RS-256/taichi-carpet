@@ -27,7 +27,7 @@ public class notice extends abstractHUDLogger{
 
     @Override
     public Text[] onHudUpdate(String option, PlayerEntity playerEntity) {
-        if (Objects.equals(NOTICETEXT, "reset") || notice.NOTICETEXT == null){
+        if (notice.NOTICETEXT == null){
             return null;
         } else {
             return new Text[]{
