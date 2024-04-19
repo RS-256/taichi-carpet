@@ -27,9 +27,11 @@ public class noticeCommand {
     }
 
     public static int changeNoticeText(String text){
-
+        if(text.equals("#None")) {
+            notice.NOTICETEXT = null;
+        } else {
             notice.NOTICETEXT = text;
-
+        }
         return 1;
     }
 }

@@ -58,7 +58,17 @@ public class TaichiCarpetSettings
     @Rule(
             categories = { OPTIMIZATION, TAICHI }
     )
-    public static boolean disableWanderingOnCart = false;
+    public static boolean disableWanderingOnVehicle = false;
+
+    @Rule(
+            categories = { OPTIMIZATION, TAICHI }
+    )
+    public static boolean disableWanderingOutOfWorld = false;
+
+    @Rule(
+            categories = { OPTIMIZATION, TAICHI }
+    )
+    public static boolean disablePushEntityOutOfWorld = false;
 
     @Rule(
             categories = { OPTIMIZATION, TAICHI }

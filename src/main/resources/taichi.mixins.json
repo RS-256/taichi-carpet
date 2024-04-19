@@ -3,12 +3,12 @@
   "package": "taichiCarpet.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "disableWanderingOnCartMixin",
     "EntityCollisionMixin",
     "HUDControllerMixin",
     "PlayerCommandMixin",
     "ServerPlayerEntityMixin",
-    "WanderAroundGoalAccessor"
+    "disablePushFromAway.EntityMixin",
+    "disableWandering.EntityNavigationMixin"
   ],
   "client": [
   ],
