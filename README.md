@@ -4,6 +4,21 @@ A carpet extension made for [taichi SMP](https://discord.gg/6U6Y8c7HQ2). This in
 
 ## Rules
 
+### disableWanderingOnVehicle
+- Type: `boolean`
+- Default value: `false`
+- Categories: `OPTIMIZATION`, `TAICHI`
+
+### disableWanderingOutOfWorld
+- Type: `boolean`
+- Default value: `false`
+- Categories: `OPTIMIZATION`, `TAICHI`
+
+### disablePushEntityOutOfWorld
+- Type: `boolean`
+- Default value: `false`
+- Categories: `OPTIMIZATION`, `TAICHI`
+
 ### optimizedDragonRespawn
 Optimize dragon respawn method. Ported from carpet AMS addition.
 > [!WARNING]

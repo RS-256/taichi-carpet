@@ -7,8 +7,6 @@ import carpet.utils.Messenger;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.Text;
 
-import java.util.Objects;
-
 public class notice extends abstractHUDLogger{
 
     public static final String NAME = "notice";

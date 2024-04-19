@@ -21,7 +21,11 @@
 
   "carpet.rule.optimizedDragonRespawn.desc" : "optimized dragon respawn, developing",
 
-  "carpet.rule.disableWanderingOnCart.desc" : "entity on minecart should not do wandering pathfinding",
+  "carpet.rule.disableWanderingOnVehicle.desc" : "entity on vehicle should not do wandering pathfinding",
+
+  "carpet.rule.disableWanderingOutOfWorld.desc" : "entity out of world should not do wandering pathfinding",
+
+  "carpet.rule.disablePushEntityOutOfWorld.desc" : ";;",
 
   "carpet.rule.disableNetherPortalCollisionCheck.desc": "Disable laggy nether portal collision checks introduced in 1.19.3",
   "carpet.rule.disableNetherPortalCollisionCheck.extra0": "Large mobs may suffocate when going through portals if you enable this",
