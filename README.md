@@ -5,16 +5,19 @@ A carpet extension made for [taichi SMP](https://discord.gg/6U6Y8c7HQ2). This in
 ## Rules
 
 ### disableWanderingOnVehicle
+Disable wandering when riding a vehicle. Basically, dosen't effect anything.
 - Type: `boolean`
 - Default value: `false`
 - Categories: `OPTIMIZATION`, `TAICHI`
 
 ### disableWanderingOutOfWorld
+Disable wandering when entity is out of the world. Basically, dosen't effect anything.
 - Type: `boolean`
 - Default value: `false`
 - Categories: `OPTIMIZATION`, `TAICHI`
 
 ### disablePushEntityOutOfWorld
+Disable pushing when entity is out of world. Basically, dosen't effect anything.
 - Type: `boolean`
 - Default value: `false`
 - Categories: `OPTIMIZATION`, `TAICHI`
