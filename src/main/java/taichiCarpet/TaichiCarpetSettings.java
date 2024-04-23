@@ -16,6 +16,11 @@ public class TaichiCarpetSettings
     public static boolean optimizedFallDamageRaycast = false;
 
     @Rule(
+            categories = { OPTIMIZATION, TAICHI }
+    )
+    public static boolean optimizedFallDamageRaycastOutOfWorld = false;
+
+    @Rule(
             categories = { SURVIVAL, COMMAND, TAICHI }
     )
     public static String commandView = "ops";
