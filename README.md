@@ -33,6 +33,12 @@ Disable fallDamageRaycast while the entity is moving upwards. Ported from chrono
 - Default value: `false`
 - Categories: `OPTIMIZATION`, `TAICHI`
 
+### optimizedFallDamageRaycastOutOfWorld
+...
+- Type: `boolean`
+- Default value: `false`
+- Categories: `OPTIMIZATION`, `TAICHI`
+
 ### commandView
 Enable /view command to changes the view distance of the server without op.
 
@@ -167,9 +173,12 @@ Set packet rate limit TaichiCarpet-Protocol
 `/sit` :  ...
 
 ### notice
+`/notice` : send everyone current notice text
+
 `/notice <text>` : change notice logger text
 
 `<text>` : must be string and can be enclosed in `" "` to allow the input of a string including spaces
+- `"#None"` or `""`: reset
 
 
 ## Loggers

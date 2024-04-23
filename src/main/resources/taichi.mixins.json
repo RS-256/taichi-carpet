@@ -8,7 +8,8 @@
     "PlayerCommandMixin",
     "ServerPlayerEntityMixin",
     "disablePushFromAway.EntityMixin",
-    "disableWandering.EntityNavigationMixin"
+    "disableWandering.EntityNavigationMixin",
+    "optimizedFallDamageRaycast.EntityMixin"
   ],
   "client": [
   ],
