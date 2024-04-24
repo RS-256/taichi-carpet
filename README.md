@@ -147,6 +147,24 @@ Set packet rate limit TaichiCarpet-Protocol
 - Default value: `1`
 - Categories: `PROTOCOL`, `TAICHI`
 
+## disableCCEUpdateSuppressionCrash
+yeet ClassCastException crash
+- Type: `boolean`
+- Default value: `false`
+- Categories: `TAICHI`
+
+## disableOOMUpdateSuppressionCrash
+yeet OutOfMemoryError crash
+- Type: `boolean`
+- Default value: `false`
+- Categories: `TAICHI`
+
+## disableSOEUpdateSuppressionCrash
+yeet StackOverflowError crash
+- Type: `boolean`
+- Default value: `false`
+- Categories: `TAICHI`
+
 
 ## commands
 
