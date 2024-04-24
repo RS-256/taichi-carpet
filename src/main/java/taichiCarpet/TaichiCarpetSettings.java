@@ -137,4 +137,17 @@ public class TaichiCarpetSettings
             categories = { TAICHI }
     )
     public static boolean disablePassengerLimit = true;
+
+    @Rule(
+            categories = { TAICHI }
+    )
+    public static boolean disableCCEUpdateSuppressionCrash = false;
+    @Rule(
+            categories = { TAICHI }
+    )
+    public static boolean disableOOMUpdateSuppressionCrash = false;
+    @Rule(
+            categories = { TAICHI }
+    )
+    public static boolean disableSOEUpdateSuppressionCrash = false;
 }

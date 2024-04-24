@@ -54,5 +54,9 @@
 
   "carpet.rule.taichiPacketRateLimit.desc" : "Set packet rate limit TaichiCarpet-Protocol",
 
-  "carpet.rule.disablePassengerLimit.desc" : "passenger limit when send player mount command"
+  "carpet.rule.disablePassengerLimit.desc" : "passenger limit when send player mount command",
+
+  "carpet.rule.disableCCEUpdateSuppressionCrash.desc": "ClassCastException",
+  "carpet.rule.disableOOMUpdateSuppressionCrash.desc": "OutOfMemoryError",
+  "carpet.rule.disableSOEUpdateSuppressionCrash.desc": "StackOverflowError"
 }
