@@ -213,6 +213,12 @@ To change value, use `/notice`
 Simple logger that display when the server will autosave and how long ago the last autosave was.
 This logger does not directly detect autosave, but rather a calculated value based on the time elapsed since the server started, which could be incorrect.
 
+### entitycount
+`/log entitycount`
+`/log entitycount minecart`
+`/log entitycount minecart,hopper_minecart,chest_minecart`
+
+
 ## playerCommand
 
 ### fill

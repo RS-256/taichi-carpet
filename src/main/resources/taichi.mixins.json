@@ -10,6 +10,7 @@
     "crashFix.ChainRestrictedNeighborUpdaterSixWayEntryMixin",
     "disablePushFromAway.EntityMixin",
     "disableWandering.EntityNavigationMixin",
+    "entityCount.ServerWorldMixin",
     "optimizedFallDamageRaycast.EntityMixin"
   ],
   "client": [
