@@ -141,13 +141,5 @@ public class TaichiCarpetSettings
     @Rule(
             categories = { TAICHI }
     )
-    public static boolean disableCCEUpdateSuppressionCrash = false;
-    @Rule(
-            categories = { TAICHI }
-    )
-    public static boolean disableOOMUpdateSuppressionCrash = false;
-    @Rule(
-            categories = { TAICHI }
-    )
-    public static boolean disableSOEUpdateSuppressionCrash = false;
+    public static boolean cceSuppressionCrashFix = false;
 }

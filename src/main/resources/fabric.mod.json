@@ -6,7 +6,8 @@
 	"name": "taichi carpet",
 	"description": "Carpet extension for taichi SMP",
 	"authors": [
-		"RS256, topi_banana"
+		"RS256",
+		"topi_banana"
 	],
 	"contact": {
 		"sources": " https://github.com/TaichiServer "
@@ -31,13 +32,15 @@
       	"carpetfixes.mixins.json",
 		"AMS.mixins.json",
 		"pca.mixins.json",
-		"fastfurnace.mixins.json"
+		"fastfurnace.mixins.json",
+		"opt-carpet-addition.mixins.json"
 	],
 
 	"depends": {
 		"minecraft": "1.20.1",
 		"fabricloader": ">=0.14.2",
-		"carpet": "*"
+		"carpet": "*",
+		"carpet-tis-addition": "*"
 	},
 	"recommends": {
 		"essential-client": "*"

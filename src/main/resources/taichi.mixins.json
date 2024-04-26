@@ -7,7 +7,6 @@
     "HUDControllerMixin",
     "PlayerCommandMixin",
     "ServerPlayerEntityMixin",
-    "crashFix.ChainRestrictedNeighborUpdaterSixWayEntryMixin",
     "disablePushFromAway.EntityMixin",
     "disableWandering.EntityNavigationMixin",
     "entityCount.ServerWorldMixin",
