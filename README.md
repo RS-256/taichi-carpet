@@ -37,6 +37,12 @@ Ported from chronos carpet by bread, pentasteve.
 - Default value: `false`
 - Categories: `OPTIMIZATION`, `TAICHI`
 
+### optimizedFallDamageRaycastOutOfWorld
+...
+- Type: `boolean`
+- Default value: `false`
+- Categories: `OPTIMIZATION`, `TAICHI`
+
 ### commandView
 Enable /view command to changes the view distance of the server without op.
 
@@ -145,6 +151,24 @@ Set packet rate limit TaichiCarpet-Protocol
 - Default value: `1`
 - Categories: `PROTOCOL`, `TAICHI`
 
+## disableCCEUpdateSuppressionCrash
+yeet ClassCastException crash
+- Type: `boolean`
+- Default value: `false`
+- Categories: `TAICHI`
+
+## disableOOMUpdateSuppressionCrash
+yeet OutOfMemoryError crash
+- Type: `boolean`
+- Default value: `false`
+- Categories: `TAICHI`
+
+## disableSOEUpdateSuppressionCrash
+yeet StackOverflowError crash
+- Type: `boolean`
+- Default value: `false`
+- Categories: `TAICHI`
+
 
 ## commands
 
@@ -170,9 +194,12 @@ Set packet rate limit TaichiCarpet-Protocol
 `/sit` : sit on the spot
 
 ### notice
+`/notice` : send everyone current notice text
+
 `/notice <text>` : change notice logger text
 
 `<text>` : must be string and can be enclosed in `" "` to allow the input of a string including spaces
+- `"#None"` or `""`: reset
 
 
 ## Loggers
@@ -189,6 +216,12 @@ To change value, use `/notice`
 Simple logger that display when the server will autosave and how long ago the last autosave was.
 This logger does not directly detect autosave, but rather a calculated value based on the time elapsed since the server started, which could be incorrect.
 Ported from essential addons.
+
+### entitycount
+`/log entitycount`
+`/log entitycount minecart`
+`/log entitycount minecart,hopper_minecart,chest_minecart`
+
 
 ## playerCommand
 

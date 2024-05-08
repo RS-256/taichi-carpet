@@ -33,10 +33,7 @@ public class ItemUtils {
             NbtCompound blockEntityTagNbt = nbt.getCompound("BlockEntityTag");
             if (blockEntityTagNbt != null) {
                 if (blockEntityTagNbt.contains("Items")) {
-                    NbtList itemList = blockEntityTagNbt.getList("Items", 10);
-                    if (itemList.isEmpty()) {
-                        return true;
-                    }
+                    return true;
                 }
             }
         }

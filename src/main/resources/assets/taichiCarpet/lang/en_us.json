@@ -5,6 +5,8 @@
   "carpet.rule.optimizedFallDamageRaycast.desc": "Disable fallDamageRaycast while the entity is moving upwards. Ported from chronos carpet by bread, pentasteve.",
   "carpet.rule.optimizedFallDamageRaycast.extra0" : "Ported from chronos carpet by bread, pentasteve",
 
+  "carpet.rule.optimizedFallDamageRaycastOutOfWorld.desc": "",
+
   "carpet.rule.commandView.desc" : "Enable /view command to changes the view distance of the server without op",
 
   "carpet.rule.commandSimulation.desc" : "Enable /simulation command to change the simulation distance of the server without op",
@@ -52,5 +54,7 @@
 
   "carpet.rule.taichiPacketRateLimit.desc" : "Set packet rate limit TaichiCarpet-Protocol",
 
-  "carpet.rule.disablePassengerLimit.desc" : "passenger limit when send player mount command"
+  "carpet.rule.disablePassengerLimit.desc" : "passenger limit when send player mount command",
+
+  "carpet.rule.cceSuppressionCrashFix.desc": "ClassCastException"
 }

@@ -1,7 +1,5 @@
 package taichiCarpet.utils;
 
-import taichiCarpet.commands.noticeCommand;
-
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import taichiCarpet.TaichiCarpetSettings;

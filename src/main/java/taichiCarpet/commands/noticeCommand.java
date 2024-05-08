@@ -1,5 +1,7 @@
 package taichiCarpet.commands;
 
+import com.mojang.brigadier.context.CommandContext;
+import net.minecraft.server.network.ServerPlayerEntity;
 import taichiCarpet.TaichiCarpetSettings;
 import taichiCarpet.logging.HUD.notice;
 
@@ -9,6 +11,7 @@ import com.mojang.brigadier.CommandDispatcher;
 
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
+import taichiCarpet.utils.sendMassage;
 
 import java.util.Objects;
 
@@ -20,18 +23,25 @@ public class noticeCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         dispatcher.register(CommandManager.literal("notice")
                 .requires(player -> CommandHelper.canUseCommand(player, TaichiCarpetSettings.commandNotice))
+                .executes(ctx -> sendGlobalMessage(ctx))
                 .then(CommandManager.argument("text", string())
-                        .executes(context -> changeNoticeText(getString(context, "text")))
+                        .executes(ctx -> changeNoticeText(getString(ctx, "text"), ctx))
                 )
         );
     }
 
-    public static int changeNoticeText(String text){
-        if(text.equals("#None")) {
+    public static int changeNoticeText(String text, CommandContext<ServerCommandSource> ctx){
+        if(text.equals("#None") || text.isEmpty()) {
             notice.NOTICETEXT = null;
         } else {
             notice.NOTICETEXT = text;
+            sendGlobalMessage(ctx);
         }
+        return 1;
+    }
+
+    public static int sendGlobalMessage(CommandContext<ServerCommandSource> ctx){
+        if(notice.NOTICETEXT!=null) sendMassage.sendGlobalMessage(ctx.getSource().getPlayer(), notice.NOTICETEXT);
         return 1;
     }
 }

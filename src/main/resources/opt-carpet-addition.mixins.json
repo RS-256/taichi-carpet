@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "Opt.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "rule.cceSuppressionCrashFix.MinecraftServer_Mixin",
+    "rule.cceSuppressionCrashFix.ShulkerBoxBlock_Mixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

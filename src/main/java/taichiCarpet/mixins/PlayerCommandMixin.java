@@ -29,12 +29,6 @@ import static net.minecraft.server.command.CommandManager.literal;
 
 @Mixin(PlayerCommand.class)
 public abstract class PlayerCommandMixin {
-
-    @Shadow
-    private static LiteralArgumentBuilder<ServerCommandSource> makeActionCommand(String actionName, EntityPlayerActionPack.ActionType type) {
-        return null;
-    }
-
     @Shadow(remap = false)
     private static int manipulate(CommandContext<ServerCommandSource> context, Consumer<EntityPlayerActionPack> action){
         return 0;
