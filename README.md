@@ -38,7 +38,8 @@ Ported from chronos carpet by bread, pentasteve.
 - Categories: `OPTIMIZATION`, `TAICHI`
 
 ### optimizedFallDamageRaycastOutOfWorld
-...
+Disable fallDamageRaycast while the entity is out of the world.
+Inspired from chronos carpet.
 - Type: `boolean`
 - Default value: `false`
 - Categories: `OPTIMIZATION`, `TAICHI`
@@ -92,7 +93,7 @@ Ported from chronos carpet.
 - Categories: `OPTIMIZATION`, `TAICHI`
 
 ### blockInventorySyncing
-Enable sync of blockInventory on the server without op
+Enable sync of blockInventory on the server without op.
 (0: disable, -1: infinity)
 - Type: `boolean`
 - Default value: `false`
@@ -151,20 +152,8 @@ Set packet rate limit TaichiCarpet-Protocol
 - Default value: `1`
 - Categories: `PROTOCOL`, `TAICHI`
 
-## disableCCEUpdateSuppressionCrash
+## cceUpdateSuppressionCrashFix
 yeet ClassCastException crash
-- Type: `boolean`
-- Default value: `false`
-- Categories: `TAICHI`
-
-## disableOOMUpdateSuppressionCrash
-yeet OutOfMemoryError crash
-- Type: `boolean`
-- Default value: `false`
-- Categories: `TAICHI`
-
-## disableSOEUpdateSuppressionCrash
-yeet StackOverflowError crash
 - Type: `boolean`
 - Default value: `false`
 - Categories: `TAICHI`
