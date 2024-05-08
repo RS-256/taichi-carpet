@@ -2,10 +2,11 @@
   "carpet.category.taichi": "taichi",
   "carpet.category.protocol": "protocol",
 
-  "carpet.rule.optimizedFallDamageRaycast.desc": "Disable fallDamageRaycast while the entity is moving upwards. Ported from chronos carpet by bread, pentasteve.",
+  "carpet.rule.optimizedFallDamageRaycast.desc": "Disable fallDamageRaycast while the entity is moving upwards.",
   "carpet.rule.optimizedFallDamageRaycast.extra0" : "Ported from chronos carpet by bread, pentasteve",
 
-  "carpet.rule.optimizedFallDamageRaycastOutOfWorld.desc": "",
+  "carpet.rule.optimizedFallDamageRaycastOutOfWorld.desc": "Disable fallDamageRaycast while the entity is out of the world.",
+  "carpet.rule.optimizedFallDamageRaycastOutOfWorkd.extra0" : "Inspired from chronos carpet by bread, pentasteve",
 
   "carpet.rule.commandView.desc" : "Enable /view command to changes the view distance of the server without op",
 
@@ -27,7 +28,7 @@
 
   "carpet.rule.disableWanderingOutOfWorld.desc" : "entity out of world should not do wandering pathfinding",
 
-  "carpet.rule.disablePushEntityOutOfWorld.desc" : ";;",
+  "carpet.rule.disablePushEntityOutOfWorld.desc" : "Disable pushEntity while the entity is out of the world.",
 
   "carpet.rule.disableNetherPortalCollisionCheck.desc": "Disable laggy nether portal collision checks introduced in 1.19.3",
   "carpet.rule.disableNetherPortalCollisionCheck.extra0": "Large mobs may suffocate when going through portals if you enable this",
@@ -56,5 +57,5 @@
 
   "carpet.rule.disablePassengerLimit.desc" : "passenger limit when send player mount command",
 
-  "carpet.rule.cceSuppressionCrashFix.desc": "ClassCastException"
+  "carpet.rule.cceSuppressionCrashFix.desc": "yeets classCastException crash"
 }
